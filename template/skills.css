@@ -1,0 +1,36 @@
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.skills .skill {
+    grid-column: span 1;
+}
+
+.skills .skill .language {
+    font-weight: 600;
+}
+
+.skills .skill p {
+    font-size: 14pt;
+}
+
+.frameworks {
+    text-align: center;
+}
+
+.frameworks .title {
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+.frameworks .framework {
+    font-size: 12pt;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

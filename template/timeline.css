@@ -1,0 +1,71 @@
+.timeline {
+    border-left: 3px solid #555;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 250px;
+}
+
+.timeline .item {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.timeline .item .work-place {
+    font-weight: 600;
+}
+
+.timeline .item .job-meta {
+    position: absolute;
+    left: -280px;
+    top: 15px;
+}
+.timeline .item .job-meta .title {
+    color: #414141;
+}
+.timeline .item .job-meta .time {
+    color: #8a8a8a;
+    font-size: 14pt;
+}
+.timeline .item .job-desc {
+    color: #464646;
+    font-size: 14pt;
+}
+.timeline .item:last-child {
+    padding-bottom: 0;
+}
+.timeline .item:before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 15px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: #fff;
+    border: 3px solid #414141;
+}
+
+
+@media (max-width: 768px) {
+    .timeline {
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline .item .job-meta {
+        position: static;
+        margin-bottom: 15px;
+    }
+}
+
