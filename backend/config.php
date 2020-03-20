@@ -8,7 +8,7 @@
  * @license MIT
  */
 
-define('PORT', null);
+define('PORT', 8080);
 define('BASE_URL',Utils::baseUrl(PORT));
 define('DEFAULT_PAGE','about');
 define('SITE_TITLE','Bruno Jesus'); //the <title> tag content

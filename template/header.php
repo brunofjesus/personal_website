@@ -30,7 +30,7 @@ $page = Context::retrieveValue("page");
                 <li><a class="<?php if ($page == 'about') {
                         echo('selected');
                     } ?>" href="<?= BASE_URL; ?>index.php/about">&#x1F471; ABOUT</a></li>
-                <li><a class="<?php if ($page == 'blog') {
+                <li><a class="<?php if ($page == 'notes') {
                         echo('selected');
                     } ?>" href="<?= BASE_URL; ?>index.php/notes">&#x1F4DD; NOTES</a></li>
             </ul>
