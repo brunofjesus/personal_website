@@ -64,7 +64,7 @@
         <div class="work-place">Wolfd</div>
         <div class="job-meta">
             <div class="title">Developer</div>
-            <div class="time">2014</div>
+            <div class="time">2012-06 / 2013-09</div>
         </div>
         <div class="job-desc"> Most of my time in this company was occupied by the development of Rediskey which turned
             out to be my first "big" project.
