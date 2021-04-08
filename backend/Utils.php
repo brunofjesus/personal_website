@@ -2,9 +2,10 @@
 
 class Utils
 {
-    $domain = "brunojesus.pt"
     public static function baseUrl(int $port = null)
     {
+        $domain = "brunojesus.pt"
+
         $url = sprintf(
             "%s://%s",
             isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
