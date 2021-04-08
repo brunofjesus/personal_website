@@ -2,13 +2,13 @@
 
 class Utils
 {
+    $domain = "brunojesus.pt"
     public static function baseUrl(int $port = null)
     {
         $url = sprintf(
-            "%s://%s%s",
+            "%s://%s",
             isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-            $_SERVER['SERVER_NAME'],
-            $_SERVER['REQUEST_URI']
+            "brunojesus.pt"
         );
 
         //drop index.php
