@@ -8,8 +8,10 @@
  * @license MIT
  */
 
+define('DOMAIN', 'brunojesus.pt');
+define('PROTOCOL', 'https');
 define('PORT', null);
-define('BASE_URL',Utils::baseUrl(PORT));
+define('BASE_URL',Utils::baseUrl(PROTOCOL, DOMAIN, PORT));
 define('DEFAULT_PAGE','about');
 define('SITE_TITLE','Bruno Jesus'); //the <title> tag content
 define('HEADER_TITLE','Bruno Jesus'); //the header page title

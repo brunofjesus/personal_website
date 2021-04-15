@@ -1,22 +1,14 @@
 <?php
 
+require_once('backend/config.php');
+
 class Utils
 {
-    public static function baseUrl(int $port = null)
+    public static function baseUrl(string $protocol = PROTOCOL, string $domain = DOMAIN, int $port = PORT)
     {
-        $domain = "brunojesus.pt"
 
-        $url = sprintf(
-            "%s://%s",
-            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-            "brunojesus.pt"
-        );
+        $url = sprintf("%s://%s", $protocol, $domain);
 
-        //drop index.php
-        $index_pos = stripos($url, '/index.php');
-        if ($index_pos) {
-            $url = substr($url, 0, stripos($url, '/index.php'));
-        }
         if ($port != null) {
             $url = rtrim($url, "/");
             $url .= ":" . $port;
