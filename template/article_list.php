@@ -1,6 +1,7 @@
 <h1><a href="#">Notes</a></h1>
 <ul>
     <?php
+    use App\backend\Blog;
     $blog = Blog::getInstance();
 
     $articleList = $blog->retrieveArticleList();

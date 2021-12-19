@@ -1,5 +1,9 @@
 <?php
 
+namespace App\backend\model;
+
+use App\backend\Parser;
+
 class Article
 {
     /**
@@ -82,7 +86,7 @@ class Article
 
     public function toHTML()
     {
-        if ($this->markdownContent === false) { //file not found
+        if ($this->markdownContent == false) { //file not found
             return false;
         }
 

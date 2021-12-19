@@ -1,5 +1,7 @@
 <?php
 
+namespace App\backend;
+
 /**
  * Class Context
  *
@@ -7,7 +9,7 @@
  */
 class Context
 {
-    private static $values = [];
+    private static array $values = [];
 
     /**
      * ApplicationContext constructor.

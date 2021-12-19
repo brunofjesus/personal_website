@@ -1,10 +1,10 @@
 <?php
 
-require_once('backend/config.php');
+namespace App\backend;
 
 class Utils
 {
-    public static function baseUrl(string $protocol = PROTOCOL, string $domain = DOMAIN, int $port = PORT)
+    public static function baseUrl(string $protocol = PROTOCOL, string $domain = DOMAIN, int $port = PORT): string
     {
 
         $url = sprintf("%s://%s", $protocol, $domain);
@@ -16,7 +16,7 @@ class Utils
         return $url . "/";
     }
 
-    public static function currentDateAsInteger()
+    public static function currentDateAsInteger(): int
     {
         return intval(date("Ymd"));
     }

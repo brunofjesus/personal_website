@@ -1,11 +1,15 @@
 <?php
 
+namespace App\backend;
+
+use App\backend\libs\Parsedown;
+
 class Parser
 {
 
     private static $instance = null;
 
-    static function getInstance()
+    static function getInstance(): ?Parser
     {
         if (isset(self::$instance) == false) {
             self::$instance = new Parser();
@@ -27,7 +31,7 @@ class Parser
         $this->parsedown = new Parsedown();
     }
 
-    function markdownToHtml($markdown)
+    function markdownToHtml($markdown): string
     {
         return $this->parsedown->text($markdown);
     }

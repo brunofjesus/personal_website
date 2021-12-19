@@ -1,11 +1,15 @@
 <?php
 
+namespace App\backend;
+
+use App\backend\model\Article;
+
 class Blog
 {
 
     private static $instance = null;
 
-    static function getInstance()
+    static function getInstance(): ?Blog
     {
         if (isset(self::$instance) == false) {
             self::$instance = new Blog();
@@ -14,14 +18,8 @@ class Blog
         return self::$instance;
     }
 
-    /**
-     * @var Parsedown
-     */
-    private $parser;
-
     function __construct()
     {
-        $this->parser = new Parsedown();
     }
 
     /**
@@ -64,7 +62,7 @@ class Blog
         $result = array();
         for ($i = sizeof($scanned_directory) - 1; $i > 1; $i--) {
             if ($scanned_directory[$i] != "temp.md") {
-                array_push($result, $scanned_directory[$i]);
+                $result[] = $scanned_directory[$i];
             }
         }
         return $result;

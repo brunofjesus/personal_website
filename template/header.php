@@ -1,4 +1,5 @@
 <?php
+use App\backend\Context;
 $page = Context::retrieveValue("page");
 ?>
 
