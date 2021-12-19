@@ -10,11 +10,11 @@
 
 use App\backend\Utils;
 
-const DOMAIN = 'localhost';
-const PROTOCOL = 'http';
-const PORT = null;
-define('BASE_URL',Utils::baseUrl(PROTOCOL, DOMAIN, PORT));
+define("DOMAIN", getenv("DOMAIN") != false ? getenv("DOMAIN") : 'localhost');
+define("PROTOCOL", getenv("PROTOCOL") != false ? getenv("PROTOCOL") : 'http');
+define("PORT", getenv("PORT") != false ? getenv("PORT") : null);
+define("BASE_URL", Utils::baseUrl(PROTOCOL, DOMAIN, PORT));
 const DEFAULT_PAGE = 'about';
 const SITE_TITLE = 'Bruno Jesus'; //the <title> tag content
 const HEADER_TITLE = 'Bruno Jesus'; //the header page title
-define('ARTICLES_PATH', realpath('./articles/') . '/');
+define("ARTICLES_PATH", realpath('./articles/') . '/');

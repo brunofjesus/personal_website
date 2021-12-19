@@ -1,4 +1,4 @@
-.idea/
+../.idea/
 visits.xml
 *.swp
 .DS_Store

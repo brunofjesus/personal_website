@@ -1,0 +1,29 @@
+image: alpine/helm:3.7.2
+
+build_docker_image:
+  stage: build
+  image: docker:20.10
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u gitlab-ci-token -p $PIPELINE_TOKEN registry.gitlab.com/simple_cv
+    - cd ./deploy/scripts
+  script:
+    - ./docker-build.sh
+    - ./docker-push.sh
+  only:
+    - master
+
+deploy-brunojesuspt:
+  stage: build
+  dependencies:
+    - build_docker_image
+  before_script:
+    - cat $KUBECONFIG_FILE >> /opt/kubeconfig.yaml
+    - export KUBECONFIG=/opt/kubeconfig.yaml
+    - export NAMESPACE=brunojesuspt
+    - export HOST=brunojesus.pt
+    - export PROTOCOL=https
+    - cd ./deploy/scripts
+  script:
+    - ./deploy.sh

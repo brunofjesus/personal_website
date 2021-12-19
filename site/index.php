@@ -47,11 +47,11 @@ class Index
     public function __construct()
     {
 
-        $pathInfo = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : "";//$_SERVER['REDIRECT_URL'];
+        $pathInfo = $_SERVER['PATH_INFO'] ?? "";
         $params = preg_split('|/|', $pathInfo, -1, PREG_SPLIT_NO_EMPTY);
 
-        $this->page = isset($params[0]) ? $params[0] : DEFAULT_PAGE;
-        $this->articleName = isset($params[1]) ? $params[1] : null;
+        $this->page = $params[0] ?? DEFAULT_PAGE;
+        $this->articleName = $params[1] ?? null;
 
 		$this->blog = Blog::getInstance();
 

@@ -4,7 +4,7 @@ namespace App\backend;
 
 class Utils
 {
-    public static function baseUrl(string $protocol = PROTOCOL, string $domain = DOMAIN, int $port = PORT): string
+    public static function baseUrl(string $protocol = PROTOCOL, string $domain = DOMAIN, $port = PORT): string
     {
 
         $url = sprintf("%s://%s", $protocol, $domain);
