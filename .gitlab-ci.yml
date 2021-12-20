@@ -23,7 +23,6 @@ deploy-brunojesuspt:
   dependencies:
     - build_docker_image
   before_script:
-    - apt update && apt install helm
     - cat $KUBECONFIG_FILE >> /opt/kubeconfig.yaml
     - export KUBECONFIG=/opt/kubeconfig.yaml
     - export NAMESPACE=brunojesuspt
