@@ -1,4 +1,4 @@
-image: registry.gitlab.com/strang3quark/nyrm/pipeline:latest
+image: registry.gitlab.com/strang3quark/simple_cv/pipeline:latest
 
 stages:
   - build

@@ -6,4 +6,4 @@ CWD=$(pwd)
 cd ../../"${0%/*}"
 
 
-docker build -t registry.gitlab.com/strang3quark/simple_cv:latest -f ./deploy/docker/Dockerfile .
+docker build -t registry.gitlab.com/strang3quark/simple_cv/site:latest -f ./deploy/docker/Dockerfile .

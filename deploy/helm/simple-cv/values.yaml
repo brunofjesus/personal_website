@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: registry.gitlab.com/strang3quark/simple_cv
+  repository: registry.gitlab.com/strang3quark/simple_cv/site
   pullPolicy: Always
   tag: "latest"
 
