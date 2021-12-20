@@ -1,4 +1,8 @@
-image: alpine/helm:3.7.2
+image: registry.gitlab.com/strang3quark/nyrm/pipeline:latest
+
+stages:
+  - build
+  - deploy
 
 build_docker_image:
   stage: build
@@ -15,10 +19,11 @@ build_docker_image:
     - master
 
 deploy-brunojesuspt:
-  stage: build
+  stage: deploy
   dependencies:
     - build_docker_image
   before_script:
+    - apt update && apt install helm
     - cat $KUBECONFIG_FILE >> /opt/kubeconfig.yaml
     - export KUBECONFIG=/opt/kubeconfig.yaml
     - export NAMESPACE=brunojesuspt

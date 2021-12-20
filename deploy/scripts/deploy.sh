@@ -15,6 +15,7 @@ helm upgrade --install simple-cv . \
  --atomic \
  --namespace "simple-cv-${NAMESPACE}" \
  --create-namespace \
+ --set namespace="${NAMESPACE}" \
  --set host="${HOST}" \
  --set protocol="${PROTOCOL}" \
  --set ingress.hosts[0].host="${HOST}" \
