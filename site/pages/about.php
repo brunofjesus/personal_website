@@ -1,6 +1,5 @@
 <p>My name is <span class="text-bold"> Bruno Jesus</span>,
-    I'm a software developer currently working for <a href="https://cloudmobility.io" class="text-marker-pink">Mercedes-Benz.io
-        @ Cloudmobility</a>.</p>
+    I'm a software developer currently working for <a href="https://frontastic.cloud" class="text-marker-pink">Frontastic</a>.</p>
 <p>I hope some of my <a href="<?= BASE_URL; ?>index.php/blog" class="text-marker-orange">notes</a> are useful to you, if
     you have
     some suggestions or want to work with me please feel free to <a href="mailto:bruno.fl.jesus@gmail.com"
@@ -12,9 +11,18 @@
 
 <div class="timeline">
     <div class="item">
+        <div class="work-place">Frontastic GmbH</div>
+        <div class="job-meta">
+            <div class="title">Software Developer</div>
+            <div class="time">2022-02 / Present</div>
+        </div>
+	<div class="job-desc">Development of <a href="https://frontastic.cloud" class="text-marker-pink">Frontastic</a> eCommerce solution</div>
+    </div>
+
+    <div class="item">
         <div class="work-place">Escola Superior de Gestão e Tecnologia de Santarém</div>
         <div class="job-meta">
-            <div class="title">Assistant Teacher</div>
+            <div class="title">Invited Assistant</div>
             <div class="time">2021-10 / Present</div>
         </div>
         <div class="job-desc">Teaching Databases</div>
@@ -23,7 +31,7 @@
         <div class="work-place">Mercedes-Benz.io @ Cloudmobility</div>
         <div class="job-meta">
             <div class="title">Software Engineer</div>
-            <div class="time">2021-08 / Present</div>
+            <div class="time">2021-08 / 2022-02</div>
         </div>
         <div class="job-desc">Development of cNS (Cloudmobility NameSpaces)</div>
     </div>
