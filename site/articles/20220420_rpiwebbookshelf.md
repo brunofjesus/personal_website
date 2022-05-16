@@ -1,6 +1,6 @@
 Raspberry Pi Web Bookshelf
 
-# [Raspberry PI Web Bookshelf](#) &mdash; 21 Apr, 2021
+# [Raspberry PI Web Bookshelf](#) &mdash; 21 Apr, 2022
 
 Until some weeks ago my Raspberry Pi "collection" consisted on a single Raspberry Pi 1 with 512MB of RAM from 2011, that changed recently, the Raspberry Pi 400 caught my eye and I decided to get one, it's a great little machine, in fact, I'm using it to write this article.
 
