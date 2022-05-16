@@ -116,6 +116,7 @@ set-default-source 3
 
   - **(Optional)** Add the login sound:
     ![Login sound](/article_files/20220517_hp_pro_c640_chromebook_ubuntu/login_sound.png)
+    - `canberra-gtk-play --id="system-ready"`
 
 - Reboot
  
