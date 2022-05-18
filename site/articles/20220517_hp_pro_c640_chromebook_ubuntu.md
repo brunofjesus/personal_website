@@ -99,10 +99,16 @@ By default, the sound should only be coming from the headphone jack, to fix that
 - Add the following at the end of the file
 ```shell
 # Chromebook configuration
+load-module module-alsa-sink device=hw:0,0
 load-module module-alsa-sink device=hw:0,5
+load-module module-alsa-sink device=hw:0,3
 load-module module-alsa-source device=hw:0,1
 set-default-sink 1
 set-default-source 3
+
+update-sink-proplist alsa_output.pci-0000_00_1f.3-platform-sof_rt5682.stereo-fallback device.description="Headphones"
+update-sink-proplist alsa_output.hw_0_5 device.description="Internal speakers"
+update-sink-proplist alsa_output.hw_0_3 device.description="HDMI"
 ```
 
 - To save the file press **Ctrl** + **X**, then it should ask for saving the file, press **Y** and then **Enter**
