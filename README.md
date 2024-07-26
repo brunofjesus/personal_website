@@ -1,3 +1,6 @@
+# Archived!
+New site can be found here: https://github.com/brunofjesus/brunojesus
+
 # brunojesus.pt
 This is a mirror of my website at http://brunojesus.pt
 
